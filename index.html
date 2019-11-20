@@ -1,0 +1,40 @@
+<!-- ====== Tugas 37 JavaScript ===== -->
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar Javascript - Niomic</title>
+</head>
+
+<body>
+  <button type="button" onclick="jalan()" name="button">Jalankan</button>
+  <br>
+  <br>
+  <hr>
+  Attribut <b>getNamedItem()</b> :
+  <p id="nameditem">contoh</p>
+  <hr>
+  Attribut <b>name</b> :
+  <p id="name">contoh</p>
+  <hr>
+  Attribut <b>length</b> :
+  <p id="length">contoh</p>
+  <hr>
+
+  <script type="text/javascript">
+    function jalan() {
+      var a = document.getElementsByTagName("button")[0];
+      var b = a.attributes.getNamedItem("onclick").value;
+      var c = a.attributes[0].name;
+      var d = a.attributes.length;
+      document.getElementById("nameditem").innerHTML = b;
+      document.getElementById("name").innerHTML = c;
+      document.getElementById("length").innerHTML = d;
+    }
+  </script>
+</body>
+
+</html>
